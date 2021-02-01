@@ -1,4 +1,4 @@
-  
+ 
 class Todo {
     constructor(pavadinimas) {
         this.name = pavadinimas;

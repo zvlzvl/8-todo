@@ -1,3 +1,4 @@
+import { Suo } from './components/Suo.js';
 import { Todo } from './components/Todo.js';
 
 const randomUzduotys = new Todo('Random uzduotys');
@@ -22,4 +23,5 @@ namuDarbai.summary();
 
 
 
-
+const suo1 = new Suo('Prada', 'black');
+suo1.greeting();
