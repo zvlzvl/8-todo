@@ -1,27 +1,48 @@
-import { Suo } from './components/Suo.js';
+
 import { Todo } from './components/Todo.js';
 
-const randomUzduotys = new Todo('Random uzduotys');
-const namuDarbai = new Todo('Namu darbai');
+const blynai = new Todo('Blynu kepimas');
+
+blynai.add('uzmaisyti tesla');
+blynai.add('ijungti kaitlente');
+blynai.add('istraukti keptuve');
+blynai.add('ipilti tesla i keptuve');
+blynai.add('apversti blynus');
+blynai.add('isimti blynus');
+blynai.add('isjungti kaitlente');
+
+blynai.edit(0, 'isplauti dubeni ir uzmaisyti tesla')
+
+blynai.remove(4);
+blynai.taskCompleted(0); 
+blynai.taskCompleted(1); 
+blynai.taskCompleted(2); 
+
+blynai.summary();
+
+blynai.print();
+blynai.printCompletedOnly();
+blynai.printNotCompletedOnly();
 
 
-randomUzduotys.add('Sukurti pirma uzduoti');
-namuDarbai.add('Susitvarky Serloko projekta');
-namuDarbai.add('Susitvarky Serloko projekta');
-namuDarbai.add('Susitvarky Serloko projekta');
-randomUzduotys.add('Uzmaisyti tesla');
-namuDarbai.add('Susitvarky Serloko projekta');
-randomUzduotys.add('Nusiskusti');
-namuDarbai.add('Susitvarky Serloko projekta');
-namuDarbai.add('Susitvarky Serloko projekta');
 
-console.log(randomUzduotys);
-console.log(namuDarbai);
+/*
+console.clear();
 
-randomUzduotys.summary();
-namuDarbai.summary();
+function labas(name = 'zmogau') {
+    console.log(`Labas, ${name}!`);
+}
+labas('Petrai')
+labas()
 
 
+function daugyba(a = 1, b =1) {
+    return a*b;
+}
+console.log(daugyba(4, 5));
+console.log(daugyba(4));
 
-const suo1 = new Suo('Prada', 'black');
-suo1.greeting();
+console.log(daugyba(2, 7));
+console.log(daugyba(2));
+
+console.log(daugyba());*/
