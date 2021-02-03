@@ -27,7 +27,8 @@ class Todo {
                 console.error('ERROR');
                 return;
             }
-        const filtered = [];
+           // const filtered = this.list.filter(this.list[i] => i !== index)
+          const filtered = [];
 
         // logic
         for (let i = 0; i < this.list.length; i++) {
@@ -35,7 +36,7 @@ class Todo {
                 filtered.push(this.list[i])
             }   
         }
-
+        
         this.list = filtered;
     }
 
@@ -46,26 +47,30 @@ class Todo {
     taskCompleted(index) {
             this.list[index].completed = true;
         }
-
         printCompletedOnly() {
+            const completed = this.list.filter(task => !task.completed)
+     
+        /*printCompletedOnly() {
             const completed = [];
 
             for (const task of this.list) {
                if (task.completed){
                completed.push(task);  
             }
-        }
+        }*/
         this.print(completed);
     }
 
         printNotCompletedOnly() {
-            const notCompleted = [];
+            const notCompleted = this.list.filter(task => task.completed)
+
+           /* const notCompleted = [];
 
             for (const task of this.list) {
                if (!task.completed){
                notCompleted.push(task);  
             }
-        }
+        }*/
 
         this.print(notCompleted);
         }
